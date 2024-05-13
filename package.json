@@ -2,7 +2,7 @@
   "name": "social-media",
   "version": "1.0.0",
   "description": "A complex social media backend",
-  "type" : "module",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "dev": "nodemon src/index.js"
@@ -12,5 +12,9 @@
     "backend"
   ],
   "author": "Vaibhav Deep Srivastava",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.0",
+    "prettier": "^3.2.5"
+  }
 }
