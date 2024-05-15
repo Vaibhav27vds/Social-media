@@ -32,4 +32,12 @@ dotenv.config({
 
 // this is the first approach but this has added alot of code to the index.js file so the other appproach to this will be that we will make a new file for the connection of the database write a similar code there and then we will import that function here in the index.js file.
 
-connectDB();
+connectDB()
+.then(() => {
+    app.listen(process.env.PORT || 8000, () => {
+        console.log(`Server is running at port http://localhost:${process.env.PORT || 8000}`);
+    })
+})
+.catch((err) => {
+    console.log('Error connecting to database', err);
+})
