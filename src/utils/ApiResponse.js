@@ -11,6 +11,7 @@ class ApiResponse {
     }
 }
 
+export { ApiResponse }
  // Status codes: 
 // Informational response : (100-199)
 // Success response : (200-299)
