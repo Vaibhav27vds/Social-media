@@ -89,7 +89,7 @@ const loginUser = asyncHandler( async (req,res) => {
         password,
     } = req.body
 
-    if(!username || !email) {
+    if(!(username || email)) {
         throw new ApiError(400, "Username or email are required")
     }
 
@@ -152,7 +152,7 @@ const logoutUser = asyncHandler(async (req, res) => {
     .json(new ApiResponse(200, {}, "user logged Out"))
 })
 
-export { registerUser }
+export { registerUser, loginUser, logoutUser }
 
 /*
 1. get user details from frontend 
@@ -173,4 +173,4 @@ export { registerUser }
     2. check if the user exists and also verify if the password is correct 
     3. then generate AccessToken and RefreshToken and send it to the user 
     4. send the refresh and access token as a secure cookie to the user 
-    */
+*/
