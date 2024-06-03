@@ -17,6 +17,8 @@ import { verify } from 'jsonwebtoken';
 
 const router = Router()
 
+// Router for registration
+
 router.route("/register").post(
     upload.fields([
         {
